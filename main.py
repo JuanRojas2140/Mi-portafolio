@@ -60,5 +60,10 @@ def guardar():
 
     return redirect('/proyectos')
 
+@app.route('/logout')
+def logout():
+    session.pop('logueado', None)  # Elimina la clave 'logueado' de la sesión
+    return redirect('/')  # Redirige a la página de inicio
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
