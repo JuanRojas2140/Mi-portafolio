@@ -5,8 +5,13 @@
 
 {% block contenido %}
   <h1>Mis Proyectos</h1>
-  <ul>
-    <li><strong>Chatbot con GPT:</strong> Integración de OpenAI en web.</li>
-    <li><strong>Análisis de texto:</strong> App Flask para detectar sentimientos.</li>
-  </ul>
+  <div class="proyectos">
+    {% for proyecto in proyectos %}
+    <div class="proyecto">
+      <h2>{{ proyecto.nombre }}</h2>
+      <p>{{ proyecto.descripcion }}</p>
+      <a href="{{ proyecto.link }}">Ver proyecto</a>
+    </div>
+    {% endfor %}
+  </div>
 {% endblock %}

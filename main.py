@@ -9,7 +9,24 @@ def inicio():
 
 @app.route('/proyectos')
 def proyectos():
-    return render_template('proyectos.html')
+    lista_proyectos = [
+        {
+            'nombre': 'Chatbot con GPT',
+            'descripcion': 'Un chatbot basado en inteligencia artificial usando OpenAI.',
+            'link': 'https://github.com/tuusuario/chatbot-gpt'
+        },
+        {
+            'nombre': 'Análisis de Sentimientos',
+            'descripcion': 'Web app que analiza el sentimiento de un texto.',
+            'link': 'https://github.com/tuusuario/analisis-sentimientos'
+        },
+        {
+            'nombre': 'Portfolio con Flask',
+            'descripcion': 'Este mismo portafolio hecho con Python y Flask.',
+            'link': '#'
+        }
+    ]
+    return render_template('proyectos.html', proyectos=lista_proyectos)
 
 @app.route('/contacto')
 def contacto():
