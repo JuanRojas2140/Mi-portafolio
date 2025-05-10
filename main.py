@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, session
 import json
 import os
 
@@ -33,8 +33,8 @@ def login():
 
 @app.route('/nuevo')
 def nuevo():
-    if not session.get('logueado'):
-        return redirect('/login')
+    if 'logueado' not in session:
+        return redirect('/login')  # Si no estás logueado, te redirige a la página de login
     return render_template('nuevo.html')
 
 @app.route('/guardar', methods=['POST'])
