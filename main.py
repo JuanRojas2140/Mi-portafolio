@@ -11,5 +11,9 @@ def inicio():
 def proyectos():
     return render_template('proyectos.html')
 
+@app.route('/contacto')
+def contacto():
+    return render_template('contacto.html')
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
