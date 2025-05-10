@@ -6,24 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block titulo %}Mi Portafolio{% endblock %}</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body { background: #f8f9fa; }
-    .container { padding: 2rem; }
-    .nav-link { color: #0057a3; }
-    .list-group-item { margin-bottom: 1rem; border-radius: 8px !important; }
-  </style>
 </head>
-<body>
-  <div class="container">
-    <nav class="nav mb-4">
-      <a class="nav-link" href="/">Inicio</a>
-      <a class="nav-link" href="/proyectos">Proyectos</a>
-      <a class="nav-link" href="/contacto">Contacto</a>
-    </nav>
-
-    <div class="container-fluid p-0">
-      {% block contenido %}{% endblock %}
+<body class="bg-light text-dark">
+  <nav class="navbar navbar-expand navbar-dark bg-primary mb-4 px-4">
+    <a class="navbar-brand text-white" href="/">Mi Portafolio</a>
+    <div>
+      <a class="nav-link text-white" href="/">Inicio</a>
+      <a class="nav-link text-white" href="/proyectos">Proyectos</a>
+      <a class="nav-link text-white" href="/contacto">Contacto</a>
     </div>
+  </nav>
+
+  <div class="container">
+    {% block contenido %}{% endblock %}
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
