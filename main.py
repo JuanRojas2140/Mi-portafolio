@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, redirect
 import json
 
 app = Flask(__name__)
+app.secret_key = os.getenv('CLAVE_SECRETA')
 
 @app.route('/')
 def inicio():
