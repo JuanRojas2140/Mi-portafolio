@@ -20,15 +20,22 @@ def proyectos():
 def contacto():
     return render_template('contacto.html')
 
-@app.route('/nuevo', methods=['GET', 'POST'])
-def nuevo():
+@app.route('/login', methods=['GET', 'POST'])
+def login():
     if request.method == 'POST':
         clave = request.form.get('clave')
         if clave == os.getenv('CLAVE_SECRETA'):
-            return render_template('nuevo.html')
+            session['logueado'] = True
+            return redirect('/nuevo')
         else:
             return "Clave incorrecta", 403
-    return render_template('clave.html')
+    return render_template('login.html')
+
+@app.route('/nuevo')
+def nuevo():
+    if not session.get('logueado'):
+        return redirect('/login')
+    return render_template('nuevo.html')
 
 @app.route('/guardar', methods=['POST'])
 def guardar():
