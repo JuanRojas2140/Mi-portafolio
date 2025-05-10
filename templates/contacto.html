@@ -1,18 +1,9 @@
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Contacto</title>
-</head>
-<body>
-  <nav>
-    <a href="/">Inicio</a> |
-    <a href="/proyectos">Proyectos</a> |
-    <a href="/contacto">Contacto</a>
-  </nav>
+{% extends "base.html" %}
 
+{% block titulo %}Contacto{% endblock %}
+
+{% block contenido %}
   <h1>Contacto</h1>
   <p>Envíame un correo a: <a href="mailto:tu@email.com">tu@email.com</a></p>
-</body>
-</html>
+{% endblock %}

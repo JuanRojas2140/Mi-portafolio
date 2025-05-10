@@ -1,18 +1,9 @@
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Inicio</title>
-</head>
-<body>
-  <nav>
-    <a href="/">Inicio</a> |
-    <a href="/proyectos">Proyectos</a> |
-    <a href="/contacto">Contacto</a>
-  </nav>
+{% extends "base.html" %}
 
+{% block titulo %}Inicio{% endblock %}
+
+{% block contenido %}
   <h1>Hola, soy Juan</h1>
   <p>Desarrollador web con interés en IA.</p>
-</body>
-</html>
+{% endblock %}

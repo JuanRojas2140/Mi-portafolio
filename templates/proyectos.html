@@ -1,21 +1,12 @@
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Proyectos</title>
-</head>
-<body>
-  <nav>
-    <a href="/">Inicio</a> |
-    <a href="/proyectos">Proyectos</a> |
-    <a href="/contacto">Contacto</a>
-  </nav>
+{% extends "base.html" %}
 
+{% block titulo %}Proyectos{% endblock %}
+
+{% block contenido %}
   <h1>Mis Proyectos</h1>
   <ul>
     <li>Chatbot con GPT</li>
     <li>Análisis de texto con IA</li>
   </ul>
-</body>
-</html>
+{% endblock %}

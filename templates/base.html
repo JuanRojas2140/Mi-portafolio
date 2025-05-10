@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block titulo %}Mi Portafolio{% endblock %}</title>
+</head>
+<body>
+  <nav>
+    <a href="/">Inicio</a> |
+    <a href="/proyectos">Proyectos</a> |
+    <a href="/contacto">Contacto</a>
+  </nav>
+
+  <div>
+    {% block contenido %}{% endblock %}
+  </div>
+</body>
+</html>
