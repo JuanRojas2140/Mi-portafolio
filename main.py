@@ -32,6 +32,10 @@ def nuevo():
 
 @app.route('/guardar', methods=['POST'])
 def guardar():
+    clave = request.form.get('clave')
+    if clave != os.getenv('CLAVE_SECRETA'):
+        return "Acceso denegado", 403
+
     nuevo_proyecto = {
         "nombre": request.form['nombre'],
         "descripcion": request.form['descripcion'],
