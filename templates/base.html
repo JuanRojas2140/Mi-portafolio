@@ -10,10 +10,13 @@
 <body class="bg-light text-dark">
   <nav class="navbar navbar-expand navbar-dark bg-primary mb-4 px-4">
     <a class="navbar-brand text-white" href="/">Mi Portafolio</a>
-    <div>
+    <div class="d-flex align-items-center">
       <a class="nav-link text-white" href="/">Inicio</a>
       <a class="nav-link text-white" href="/proyectos">Proyectos</a>
       <a class="nav-link text-white" href="/contacto">Contacto</a>
+      {% if session.get('logueado') %}
+        <a href="/logout" class="btn btn-danger ms-2">Cerrar sesión</a>
+      {% endif %}
     </div>
   </nav>
 
