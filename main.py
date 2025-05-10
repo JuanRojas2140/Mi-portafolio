@@ -13,17 +13,20 @@ def proyectos():
         {
             'nombre': 'Chatbot con GPT',
             'descripcion': 'Un chatbot basado en inteligencia artificial usando OpenAI.',
-            'link': 'https://github.com/tuusuario/chatbot-gpt'
+            'link': 'https://github.com/tuusuario/chatbot-gpt',
+            'imagen': 'https://placehold.co/300x200?text=Chatbot'
         },
         {
             'nombre': 'Análisis de Sentimientos',
             'descripcion': 'Web app que analiza el sentimiento de un texto.',
-            'link': 'https://github.com/tuusuario/analisis-sentimientos'
+            'link': 'https://github.com/tuusuario/analisis-sentimientos',
+            'imagen': 'https://placehold.co/300x200?text=Sentimientos'
         },
         {
             'nombre': 'Portfolio con Flask',
             'descripcion': 'Este mismo portafolio hecho con Python y Flask.',
-            'link': '#'
+            'link': '#',
+            'imagen': 'https://placehold.co/300x200?text=Portfolio'
         }
     ]
     return render_template('proyectos.html', proyectos=lista_proyectos)
