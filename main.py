@@ -4,7 +4,7 @@ import json
 import os
 
 app = Flask(__name__)
-app.secret_key = os.getenv('CLAVE_SECRETA')
+app.secret_key = os.getenv('FLASK_SECRET_KEY', os.urandom(24))
 
 @app.route('/')
 def inicio():
