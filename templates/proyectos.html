@@ -4,15 +4,18 @@
 {% block titulo %}Proyectos{% endblock %}
 
 {% block contenido %}
-  <h1>Mis Proyectos</h1>
-  <ul>
+  <h1 class="mb-4">Mis Proyectos</h1>
+  <div class="row">
     {% for proyecto in proyectos %}
-      <li>
-        <strong>{{ proyecto.nombre }}</strong><br>
-        {{ proyecto.descripcion }}<br>
-        <a href="{{ proyecto.link }}" target="_blank">Ver proyecto</a>
-      </li>
-      <br>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">{{ proyecto.nombre }}</h5>
+            <p class="card-text">{{ proyecto.descripcion }}</p>
+            <a href="{{ proyecto.link }}" class="btn btn-primary" target="_blank">Ver proyecto</a>
+          </div>
+        </div>
+      </div>
     {% endfor %}
-  </ul>
+  </div>
 {% endblock %}
