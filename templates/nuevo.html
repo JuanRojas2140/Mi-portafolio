@@ -6,6 +6,7 @@
 {% block contenido %}
   <h1>Agregar Proyecto</h1>
   <form action="/guardar" method="post" class="mb-3">
+    <input type="hidden" name="clave" value="{{ request.form.get('clave') }}">
     <div class="mb-3">
       <label class="form-label">Nombre:</label>
       <input type="text" name="nombre" class="form-control" required>
