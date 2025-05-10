@@ -5,13 +5,14 @@
 
 {% block contenido %}
   <h1>Mis Proyectos</h1>
-  <div class="proyectos">
+  <ul>
     {% for proyecto in proyectos %}
-    <div class="proyecto">
-      <h2>{{ proyecto.nombre }}</h2>
-      <p>{{ proyecto.descripcion }}</p>
-      <a href="{{ proyecto.link }}">Ver proyecto</a>
-    </div>
+      <li>
+        <strong>{{ proyecto.nombre }}</strong><br>
+        {{ proyecto.descripcion }}<br>
+        <a href="{{ proyecto.link }}" target="_blank">Ver proyecto</a>
+      </li>
+      <br>
     {% endfor %}
-  </div>
+  </ul>
 {% endblock %}
