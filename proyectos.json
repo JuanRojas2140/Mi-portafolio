@@ -1,4 +1,3 @@
-
 [
   {
     "nombre": "Chatbot con GPT",
@@ -11,5 +10,11 @@
     "descripcion": "Web app que analiza el sentimiento de un texto.",
     "link": "https://github.com/tuusuario/analisis-sentimientos",
     "imagen": "https://placehold.co/300x200?text=Sentimientos"
+  },
+  {
+    "nombre": "Menu",
+    "descripcion": "Menú venezolano ",
+    "link": "https://images.app.goo.gl/CZhsiJozPFytkRFg7",
+    "imagen": "https://images.app.goo.gl/CZhsiJozPFytkRFg7"
   }
 ]
