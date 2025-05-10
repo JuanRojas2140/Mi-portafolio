@@ -1,6 +1,7 @@
 
 from flask import Flask, render_template, request, redirect
 import json
+import os
 
 app = Flask(__name__)
 app.secret_key = os.getenv('CLAVE_SECRETA')
@@ -19,9 +20,15 @@ def proyectos():
 def contacto():
     return render_template('contacto.html')
 
-@app.route('/nuevo')
+@app.route('/nuevo', methods=['GET', 'POST'])
 def nuevo():
-    return render_template('nuevo.html')
+    if request.method == 'POST':
+        clave = request.form.get('clave')
+        if clave == os.getenv('CLAVE_SECRETA'):
+            return render_template('nuevo.html')
+        else:
+            return "Clave incorrecta", 403
+    return render_template('clave.html')
 
 @app.route('/guardar', methods=['POST'])
 def guardar():
